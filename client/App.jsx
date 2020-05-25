@@ -1,6 +1,9 @@
 import React from 'react';
 import './App.scss'
 const { getAllClients } = require('./sources/clients');
+import NavBar from './components/NavBar'
+import NavItem from './components/NavItem'
+import CloseIcon from './svgs/close.svg'
 
 export default class App extends React.Component {
 
@@ -17,9 +20,10 @@ export default class App extends React.Component {
 
     render() {
         return (
-            <div className="container">
-                {console.log('THIS IS CLIENTS ====>', this.state.clients)}
-                <h1>Hello World, React!</h1>
+            <div>
+                <NavBar testProps='This is testProps'>
+                    <NavItem icon={CloseIcon}/>
+                </NavBar>
             </div>
         )
     }

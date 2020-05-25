@@ -1,0 +1,18 @@
+import React from 'react'
+
+export default class NavItem extends React.Component {
+
+    constructor(props){
+        super(props)
+    }
+    render() {
+        const {icon} = this.props
+        return (
+            <li className="nav-item">
+              <a href="#" className="icon-button" onClick={() => setOpen(!open)}>
+                <div dangerouslySetInnerHTML={{ __html: icon }}/>
+              </a>
+            </li>
+        )
+    }
+}

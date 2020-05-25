@@ -26,7 +26,55 @@ module.exports = {
             {
                 test:/\.s?css$/,
                 use:['style-loader','css-loader', 'sass-loader']
+            },
+            {
+                test: /\.svg$/,
+                use: [
+                  '@svgr/webpack',
+                  'url-loader'
+                ]
+            },
+            {
+                test: /\.svg$/,
+                exclude: /node_modules/,
+                loader: 'raw-loader'
+            },
+            {
+                test: /\.(png|jp(e*)g|svg|gif)$/,
+                use: [
+                  {
+                    loader: 'file-loader',
+                    options: {
+                      name: 'images/[hash]-[name].[ext]',
+                    },
+                  },
+                ],
             }
         ]
     }
 }
+
+
+
+const webpack = require('webpack');
+
+// module.exports = {
+//   entry: './src/index.js',
+//   module: {
+//     rules: [
+//       //...
+//       {
+//         test: /\.(png|jp(e*)g|svg|gif)$/,
+//         use: [
+//           {
+//             loader: 'file-loader',
+//             options: {
+//               name: 'images/[hash]-[name].[ext]',
+//             },
+//           },
+//         ],
+//       },
+//     ],
+//   },
+//   //...
+// };
