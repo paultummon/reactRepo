@@ -34,22 +34,33 @@ module.exports = {
                   'url-loader'
                 ]
             },
+            // {
+            //     test: /\.(png|jp(e*)g|svg|gif)$/,
+            //     use: [
+            //       {
+            //         loader: 'file-loader',
+            //         options: {
+            //           name: 'client/svgs/[hash]-[name].[ext]',
+            //         },
+            //       },
+            //     ],
+            // },
             {
                 test: /\.svg$/,
-                exclude: /node_modules/,
-                loader: 'raw-loader'
-            },
-            {
-                test: /\.(png|jp(e*)g|svg|gif)$/,
                 use: [
                   {
-                    loader: 'file-loader',
+                    loader: 'svg-url-loader',
                     options: {
-                      name: 'images/[hash]-[name].[ext]',
+                      limit: 10000,
                     },
                   },
                 ],
-            }
+              }
+            // },
+            // {
+            //     test: /\.(eot|svg|ttf|woff|woff2)$/,
+            //     loader: 'file?name=client/svgs/[name].[ext]'
+            // }
         ]
     }
 }

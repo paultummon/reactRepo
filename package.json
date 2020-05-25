@@ -21,6 +21,8 @@
     "style-loader": "^1.2.1",
     "styled-components": "^5.1.0",
     "superagent": "^5.2.2",
+    "svg-inline-loader": "^0.8.2",
+    "svg-url-loader": "^6.0.0",
     "url-loader": "^4.1.0",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",

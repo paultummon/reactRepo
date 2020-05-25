@@ -5,6 +5,8 @@ import NavBar from './components/NavBar'
 import NavItem from './components/NavItem'
 import CloseIcon from './svgs/close.svg'
 
+const src = <img src="client/svgs/close.svg" height="25" width="25"/>
+
 export default class App extends React.Component {
 
     constructor(props){
@@ -22,7 +24,7 @@ export default class App extends React.Component {
         return (
             <div>
                 <NavBar testProps='This is testProps'>
-                    <NavItem icon={CloseIcon}/>
+                    <NavItem icon={src}/>
                 </NavBar>
             </div>
         )

@@ -9,8 +9,8 @@ export default class NavItem extends React.Component {
         const {icon} = this.props
         return (
             <li className="nav-item">
-              <a href="#" className="icon-button" onClick={() => setOpen(!open)}>
-                <div dangerouslySetInnerHTML={{ __html: icon }}/>
+              <a href="#" className="icon-button">
+                {icon}
               </a>
             </li>
         )
