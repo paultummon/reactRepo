@@ -51,6 +51,9 @@ a {
 
 .nav-item {
     width: calc(var(--nav-size) * 0.8);
+    display: flex;
+    align-items:center;
+    justify-content:center;
 }
 
 .icon-button {
@@ -69,4 +72,15 @@ a {
 
 .icon-button:hover {
     filter: brightness(1.2)
+}
+
+.dropdown {
+    position: absolute;
+    width:300px;
+    transform: translateX(-45%);
+    background-color: var(--bg);
+    border: var(--border);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    overflow: hidden;
 }

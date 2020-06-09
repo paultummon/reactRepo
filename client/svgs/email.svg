@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="16px" viewBox="0 0 21 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 56 (81588) - https://sketch.com -->
+    <title>Fill 1</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="medium/email" transform="translate(-14.000000, -16.000000)" fill="#435363" fill-rule="nonzero">
+            <path d="M15,30.999 L15.001,17.582 L23.853,25.106 C24.041,25.266 24.27,25.345 24.5,25.345 C24.73,25.345 24.959,25.266 25.147,25.106 L34,17.581 L33.999,31 L15,30.999 Z M33.14,17 L24.5,24.344 L15.86,17 L33.14,17 Z M33.999,16 L15.001,16 C14.448,16 14,16.448 14,17.001 L14,30.999 C14,31.552 14.448,32 15.001,32 L33.999,32 C34.552,32 35,31.552 35,30.999 L35,17.001 C35,16.448 34.552,16 33.999,16 L33.999,16 Z" id="Fill-1"></path>
+        </g>
+    </g>
+</svg>
