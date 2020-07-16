@@ -4,6 +4,7 @@ const { getAllClients } = require('./sources/clients');
 import {bindActionCreators} from 'redux'
 import { selectUser } from 'actions/users'
 import {connect} from 'react-redux'
+import Games from './Games'
 import NavBar from './components/NavBar'
 import NavItem from './components/NavItem'
 import Dropdown from './components/Dropdown'
@@ -44,7 +45,7 @@ export default connect(mapStateToProps, matchDispatchToProps)(class App extends 
                 </NavBar>
                 <Route
                     path='/games'
-                    component={<h1>Games</h1>}
+                    component={Games}
                 />
                 <button style={{color: "red"}} onClick={() => this.props.selectUser(this.props.users[0])}>SelectedUser ={this.props.activeUser ? this.props.activeUser.first : ''}</button>
 
