@@ -4,7 +4,7 @@ const { getAllClients } = require('./sources/clients');
 import {bindActionCreators} from 'redux'
 import { selectUser } from 'actions/users'
 import {connect} from 'react-redux'
-import Games from './Games'
+import Games from './components/Games'
 import NavBar from './components/NavBar'
 import NavItem from './components/NavItem'
 import Dropdown from './components/Dropdown'

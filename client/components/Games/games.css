@@ -1,0 +1,10 @@
+.gamesList {
+    display: flex;
+    width: 100%;
+    background-color: navy;
+    color: white;
+    list-style: none;
+    align-items: center;
+    height: 50px;
+    justify-content: space-around;
+};
