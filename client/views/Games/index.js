@@ -10,9 +10,9 @@ export default class Games extends React.Component {
         return (
             <div>
                 <ul class='gamesList'>
-                    <li>List Item 1</li>
-                    <li>List Item 2</li>
-                    <li>List Item 3</li>
+                    <li>Game 1</li>
+                    <li>Game 2</li>
+                    <li>Game 3</li>
                 </ul>
             </div>
         )
