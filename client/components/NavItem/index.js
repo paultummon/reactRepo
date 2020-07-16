@@ -16,12 +16,12 @@ export default class NavItem extends React.Component {
     render() {
         // const [open, setOpen] = useState(false)
         // hooks can only be called in functional components
-        const {icon, children} = this.props
+        const {icon, children, route} = this.props
         const {open} = this.state
         console.log('THIS IS OPEN NOW ===>', open)
         return (
             <li className="nav-item">
-              <a href="#" className="icon-button" onClick={() => this.setState({open:!open})}>
+              <a href={route} className="icon-button" onClick={() => this.setState({open:!open})}>
                 {icon}
               </a>
               {open && children}
