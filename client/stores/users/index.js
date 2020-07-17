@@ -2,21 +2,21 @@ export default function() {
     return [
         {
             id: 1,
-            first: "Bucky1",
-            last: "Roberts1",
-            age: 71
+            first: "Lewis",
+            last: "Julius",
+            age: 21
         },
         {
             id: 2,
-            first: "Bucky2",
-            last: "Roberts2",
-            age: 71
+            first: "Carlyle",
+            last: "Franklyn",
+            age: 56
         },
         {
             id: 3,
-            first: "Bucky3",
-            last: "Roberts3",
-            age: 71
+            first: "Evan",
+            last: "Samsonite",
+            age: 87
         }
     ]
 }

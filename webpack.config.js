@@ -66,6 +66,7 @@ module.exports = {
     },
     devServer: {
       historyApiFallback: true,
+      port: 9000
       // headers: {
       //   "Access-Control-Allow-Origin": "*",
       //   https: true

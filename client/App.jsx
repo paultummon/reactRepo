@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import './App.scss'
-const { getAllClients } = require('./sources/clients');
+import { getAllClients } from './sources/clients'
 import {bindActionCreators} from 'redux'
 import { selectUser } from 'actions/users'
 import {connect} from 'react-redux'
+import About from './views/About'
 import DropdownView from './views/Dropdown'
 import Games from './views/Games'
 import Shopping from './views/Shopping'
@@ -30,6 +31,7 @@ export default connect(mapStateToProps, matchDispatchToProps)(class App extends 
             // console.log('THIS IS REDUX USERS ====>', this.props)
             this.setState({clients: response})
         })
+        this.props.selectUser(this.props.users[0])
     }
 
     render() {
@@ -37,9 +39,9 @@ export default connect(mapStateToProps, matchDispatchToProps)(class App extends 
         // console.log('THIS IS STATE ====>', this.state)
         return (
             <Router>
-            <div className='navContainer'>
+            <div className='appContainer'>
+                <h1>Welcome Back: {this.props.activeUser ? this.props.activeUser.first : ''}</h1>
                 <NavBar onClick={() => this.props.selectUser(this.props.users[0])} testProps='This is testProps'>
-                    <NavItem icon={srcClose} route='about'/>
                     <NavItem icon={srcClose} route='games'/>
                     <NavItem icon={srcClose} route='shopping'/>
                     <NavItem icon={srcClose} route='news'/>
@@ -50,8 +52,8 @@ export default connect(mapStateToProps, matchDispatchToProps)(class App extends 
                 </NavBar>
                 <Switch>
                     <Route
-                        path='/about'
-                        component={Games}
+                        path='/'
+                        component={About}
                     />
                     <Route
                         path='/games'
