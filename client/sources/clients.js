@@ -1,11 +1,7 @@
 const request = require('superagent');
-const port = 3030
-
-// import request from 'superagent';
 
 const getAllClients = () => {
-  const url=`http://localhost:${port}`;
-  console.log('THIS IS PORT ====>', port)
+  const url=`http://localhost:3030`;
   return request.get(`${url}/clients`)
     .accept('json')
     .then(res => {

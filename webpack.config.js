@@ -66,7 +66,14 @@ module.exports = {
     },
     devServer: {
       historyApiFallback: true,
-    }
+      // headers: {
+      //   "Access-Control-Allow-Origin": "*",
+      //   https: true
+      // }
+    },
+    node: {
+      fs: "empty"
+   }
 }
 
 

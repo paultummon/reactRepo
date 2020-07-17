@@ -4,6 +4,7 @@ const { getAllClients } = require('./sources/clients');
 import {bindActionCreators} from 'redux'
 import { selectUser } from 'actions/users'
 import {connect} from 'react-redux'
+import DropdownView from './views/Dropdown'
 import Games from './views/Games'
 import Shopping from './views/Shopping'
 import NavBar from './components/NavBar'
@@ -25,22 +26,25 @@ export default connect(mapStateToProps, matchDispatchToProps)(class App extends 
 
     componentDidMount() {
         getAllClients().then(response => {
-            console.log('THIS IS RESPONSE ====>', response)
-            console.log('THIS IS REDUX USERS ====>', this.props)
+            // console.log('THIS IS RESPONSE ====>', response)
+            // console.log('THIS IS REDUX USERS ====>', this.props)
             this.setState({clients: response})
         })
     }
 
     render() {
+        // console.log('THIS IS PROPS ====>', this.props)
+        // console.log('THIS IS STATE ====>', this.state)
         return (
             <Router>
-            <div>
+            <div className='navContainer'>
                 <NavBar onClick={() => this.props.selectUser(this.props.users[0])} testProps='This is testProps'>
                     <NavItem icon={srcClose} route='about'/>
                     <NavItem icon={srcClose} route='games'/>
                     <NavItem icon={srcClose} route='shopping'/>
                     <NavItem icon={srcClose} route='news'/>
-                    <NavItem icon={srcEmail} route='cars'>
+                    <NavItem icon={srcClose} route='dropdown'/>
+                    <NavItem icon={srcEmail}>
                         <Dropdown/>
                     </NavItem>
                 </NavBar>
@@ -65,8 +69,12 @@ export default connect(mapStateToProps, matchDispatchToProps)(class App extends 
                         path='/cars'
                         component={Games}
                     />
+                    <Route
+                        path='/dropdown'
+                        component={DropdownView}
+                    />
                 </Switch>
-                <button style={{color: "red"}} onClick={() => this.props.selectUser(this.props.users[0])}>SelectedUser ={this.props.activeUser ? this.props.activeUser.first : ''}</button>
+                {/* <button style={{color: "red"}} onClick={() => this.props.selectUser(this.props.users[0])}>SelectedUser ={this.props.activeUser ? this.props.activeUser.first : ''}</button> */}
 
             </div>
             </Router>

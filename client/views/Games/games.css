@@ -9,3 +9,8 @@
     justify-content: space-around;
     border-radius: 5px;
 };
+
+.gamesContainer {
+    background-color: purple;
+    height: 100%;
+}

@@ -1,9 +1,13 @@
 
 $default-background: #D3D3D3;
 
-body {
+html, body {
     height: 100%;
     background-color: $default-background;
+}
+
+.navContainer{
+    height: 100%
 }
 
 .container {

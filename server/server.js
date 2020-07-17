@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express');
 const app = express();
 const cors = require('cors');  
@@ -10,4 +11,4 @@ app.get('/clients', (req, res) => {
    res.json(clients);
 });
 
-app.listen(port, () => console.log(`Server listening on port ${port}`));
+app.listen(port, () => console.log(`Server listening on port: ${port}`));

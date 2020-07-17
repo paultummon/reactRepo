@@ -9,7 +9,7 @@ export default class Games extends React.Component {
     render() {
         return (
             <div>
-                <ul class='shoppingList'>
+                <ul className='shoppingList'>
                     <li>Shopping 1</li>
                     <li>Shopping 2</li>
                     <li>Shopping 3</li>
