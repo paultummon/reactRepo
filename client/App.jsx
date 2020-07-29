@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './App.scss'
+import './App.css'
 import { getAllClients } from './sources/clients'
 import {bindActionCreators} from 'redux'
 import { selectUser } from 'actions/users'
@@ -12,11 +12,8 @@ import NavBar from './components/NavBar'
 import NavItem from './components/NavItem'
 import Dropdown from './components/Dropdown'
 import {Route, BrowserRouter as Router, Switch} from 'react-router-dom'
-
-const srcClose = <img src="client/svgs/close.svg" height="25" width="25"/>
-const srcEmail = <img src="client/svgs/email.svg" height="25" width="25"/>
-const srcClose2 = <img src="client/svgs/close.svg" height="25" width="25"/>
-const srcClose3 = <img src="client/svgs/close.svg" height="25" width="25"/>
+import close from 'client/svgs/close.svg';
+import email from 'client/svgs/email.svg';
 
 export default connect(mapStateToProps, matchDispatchToProps)(class App extends React.Component {
 
@@ -27,26 +24,22 @@ export default connect(mapStateToProps, matchDispatchToProps)(class App extends 
 
     componentDidMount() {
         getAllClients().then(response => {
-            // console.log('THIS IS RESPONSE ====>', response)
-            // console.log('THIS IS REDUX USERS ====>', this.props)
             this.setState({clients: response})
         })
         this.props.selectUser(this.props.users[0])
     }
 
     render() {
-        // console.log('THIS IS PROPS ====>', this.props)
-        // console.log('THIS IS STATE ====>', this.state)
         return (
             <Router>
             <div className='appContainer'>
                 <h1>Welcome Back: {this.props.activeUser ? this.props.activeUser.first : ''}</h1>
                 <NavBar onClick={() => this.props.selectUser(this.props.users[0])} testProps='This is testProps'>
-                    <NavItem icon={srcClose} route='games'/>
-                    <NavItem icon={srcClose} route='shopping'/>
-                    <NavItem icon={srcClose} route='news'/>
-                    <NavItem icon={srcClose} route='dropdown'/>
-                    <NavItem icon={srcEmail}>
+                    <NavItem icon={<img src={close} alt="" height="25px" width="25px"/>} route='games'/>
+                    <NavItem icon={<img src={close} alt="" height="25px" width="25px"/>} route='shopping'/>
+                    <NavItem icon={<img src={close} alt="" height="25px" width="25px"/>} route='news'/>
+                    <NavItem icon={<img src={close} alt="" height="25px" width="25px"/>} route='dropdown'/>
+                    <NavItem icon={<img src={email} alt="" height="25px" width="25px"/>}>
                         <Dropdown/>
                     </NavItem>
                 </NavBar>

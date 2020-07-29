@@ -1,12 +1,13 @@
 // import React from 'react'
 
 import React, {useState} from 'react';
+import css from './NavItem.css'
+import close from 'client/svgs/close.svg';
 
 export default class NavItem extends React.Component {
 
     constructor(props){
         super(props)
-        
         this.state = {open:false};
     }
 
@@ -20,8 +21,8 @@ export default class NavItem extends React.Component {
         const {open} = this.state
         console.log('THIS IS OPEN NOW ===>', open)
         return (
-            <li className="nav-item">
-              <a href={route} className="icon-button" onClick={() => this.setState({open:!open})}>
+            <li className={css.navItem}>
+              <a href={route} className={css.iconButton} onClick={() => this.setState({open:!open})}>
                 {icon}
               </a>
               {open && children}

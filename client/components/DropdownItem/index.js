@@ -1,13 +1,10 @@
 import React from 'react'
-
-
+import css from './DropdownItem.css'
 export default class DropdownItem extends React.Component {
-
 
     constructor(props){
         super(props)
     }
-
 
     componentDidMount(){
 
@@ -17,9 +14,9 @@ export default class DropdownItem extends React.Component {
         const {children, leftIcon, rightIcon} = this.props
         return(
             <a href="#" className="menu-item">
-                <span className="icon-button">{leftIcon}</span>
+                <span className={css.iconButton}>{leftIcon}</span>
                 {children}
-                <span className="icon-button">{rightIcon}</span>
+                <span className={css.iconButton}>{rightIcon}</span>
             </a>
         )
     }

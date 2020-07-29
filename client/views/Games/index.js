@@ -1,5 +1,5 @@
 import React from 'react'
-import './games.css'
+import css from './games.css'
 export default class Games extends React.Component {
 
     constructor(props){
@@ -7,8 +7,8 @@ export default class Games extends React.Component {
     }
     render() {
         return (
-            <div className='gamesContainer'>
-                <ul className='gamesList'>
+            <div className={css.gamesContainer}>
+                <ul className={css.gamesList}>
                     <li>Game 1</li>
                     <li>Game 2</li>
                     <li>Game 3</li>
